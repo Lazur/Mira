@@ -188,6 +188,13 @@ NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 ```
 
+Link the Supabase CLI to your project (one-time; the project ref is the subdomain of your `NEXT_PUBLIC_SUPABASE_URL`):
+
+```bash
+supabase login
+supabase link --project-ref <your-project-ref>
+```
+
 Run database migrations:
 
 ```bash

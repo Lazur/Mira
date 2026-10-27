@@ -35,7 +35,14 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
 
 ## Setup
 
-From the root of the repository, run database migrations:
+From the root of the repository, link the Supabase CLI to your project (one-time; the project ref is the subdomain of your `NEXT_PUBLIC_SUPABASE_URL`):
+
+```bash
+supabase login
+supabase link --project-ref <your-project-ref>
+```
+
+Then run database migrations:
 
 ```bash
 npm run db:migrate
